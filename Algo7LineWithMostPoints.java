@@ -93,7 +93,11 @@ boolean arrayHasElement(int[][] coordinatePairs, int[] coordinates) {
 
 void printArray(int[][] coordinatesList) {
     for (int[] ints : coordinatesList) {
-        if(ints != null)System.out.print(Arrays.toString(ints));
+        if (ints == null) {
+            System.out.println();
+            return;
+        }
+        System.out.print(Arrays.toString(ints));
     }
     System.out.println();
 }
